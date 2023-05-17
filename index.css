@@ -1,0 +1,577 @@
+@font-face {
+  font-family: "Lora Regular";
+  src: url("../../assets/fonts/Lora-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Liana Regular";
+  src: url("../../assets/fonts/liana.ttf");
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "Lora Regular";
+  font-size: 10px;
+  font-style: normal;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+button {
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+._wrapper {
+  width: 1200px;
+}
+.title {
+  font-family: "Lora Regular";
+  font-size: 3rem;
+}
+.title_bottom {
+  font-family: "Liana Regular";
+  font-size: 1.5rem;
+}
+
+.main {
+  position: relative;
+  height: 8rem;
+  width: 100%;
+  background-color: #adc4c6;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 90px;
+}
+
+.header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  margin: 1rem;
+  padding: 0 2rem 0;
+  align-items: center;
+}
+
+.header_logo {
+  width: auto;
+  height: 6rem;
+}
+.navigation {
+  color: white;
+  width: auto;
+  height: 27px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  font-size: 1.6rem;
+  list-style-type: none;
+}
+
+.menu__link {
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+  font-style: normal;
+  line-height: 160%;
+  text-decoration: none;
+  color: white;
+}
+.menu__link:hover {
+  color: #edd1c7;
+}
+
+.mission {
+  height: 35rem;
+}
+
+.mission_block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  flex-direction: column;
+}
+.mission-title {
+  width: 50rem;
+  height: auto;
+  animation: fadeIn 6s ease-in forwards;
+  position: relative;
+  z-index: 2;
+  font-size: 4rem;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.7;
+}
+.mission-text {
+  animation: fadeIn 2s ease-in forwards;
+  font-style: italic;
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+  margin: 0 20rem 1.5rem;
+  opacity: 0.5;
+}
+.button__mission {
+  margin-top: 20px;
+  opacity: 0.5;
+  z-index: 2;
+}
+.button__mission:hover {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+.buttontxt {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lora Regular";
+  color: white;
+  width: 100px;
+  height: 30px;
+  border: 2px solid #ffffff;
+  border-radius: 100px;
+}
+.mission__video {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mission__video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+.about_inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}
+.about_inner__left {
+  width: 550px;
+  height: 800px;
+  background-image: url(../../assets/images/ABOUT.jpg);
+  background-size: 100%;
+}
+.about_inner__right {
+  width: 550px;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 25px;
+  color: #636362;
+}
+
+.about_title {
+  text-align: center;
+  font-family: "Lora Regular" serif;
+  color: #636362;
+  font-size: 40px;
+  line-height: 130%;
+}
+.allocated__lemerite {
+  color: #adc4c6;
+}
+.about_text {
+  font-family: "Lora Regular";
+  font-style: normal;
+  font-size: 15px;
+  line-height: 160%;
+  color: #636362;
+}
+
+.topProduct {
+  height: 777px;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0 100px 0;
+  background-color: #f6f6f6;
+}
+
+.topProduct_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  height: 697px;
+}
+
+.topProduct__title {
+  font-family: "Lora Regular";
+  font-style: bold;
+  font-size: 35px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+.topProduct_cards {
+  display: flex;
+  gap: 90px;
+  position: relative;
+}
+
+.card {
+  border-radius: 9px;
+  width: 270px;
+  height: 435px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.product_photo {
+  height: 270px;
+  width: 270px;
+}
+
+.product_name {
+  font-family: "Lora regular" serif;
+  color: #545454;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.allocated__lemeriteOrange {
+  color: #edd1c7;
+}
+.button_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 187px;
+  height: 52px;
+  border: 2px solid #edd1c7;
+  border-radius: 100px;
+  transition: background-color 0.2s ease;
+  margin-bottom: 40px;
+}
+.button_card:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 187px;
+  height: 52px;
+  background: #edd1c7;
+  border-radius: 100px;
+}
+.button__product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 187px;
+  height: 52px;
+  background: inherit;
+  border-radius: 100px;
+  border-radius: 100px;
+  border: 2px solid #edd1c7;
+}
+
+.button__product:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 187px;
+  height: 52px;
+  background-color: #edd1c7;
+  transition: background-color 0.2s ease;
+}
+
+.button_unactive {
+  font-family: "Lora Regular";
+}
+
+.card_name {
+  font-family: "Georgia Regular" serif;
+  color: #545454;
+  font-size: 20px;
+}
+
+.card_photo1 {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/cold2.jpg);
+}
+
+.card_photo2 {
+  background-size: 100%;
+  background-image: url(../../assets/images/salt3.jpg);
+}
+
+.card_photo3 {
+  background-size: 100%;
+  background-image: url(../../assets/images/hot2.jpg);
+}
+
+.marketplace {
+  padding: 0;
+  height: 500px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../../assets/images/proverka.jpg);
+  background-size: 110%;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.marketplace_inner {
+  margin-top: 42px;
+  justify-content: space-between;
+  margin: 0;
+}
+.marketplace_title {
+  padding: 0;
+  margin-bottom: 42px;
+  display: flex;
+  justify-content: center;
+}
+.marketplace_title__style {
+  color: #ffffff;
+  font-family: "Lora Regular";
+  font-size: 4rem;
+  letter-spacing: 0.06em;
+  line-height: 130%;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.marketplce_list {
+  display: flex;
+  width: auto;
+  height: 20rem;
+  justify-content: space-evenly;
+  row-gap: 30px;
+  column-gap: 30px;
+}
+
+.marketplace__card {
+  height: 200px;
+  width: auto;
+}
+
+.logosize {
+  width: 100%;
+  height: 100%;
+}
+
+.ozon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.ozon:hover {
+  transform: scale(1.3);
+}
+
+.wildberries {
+  transition: transform 0.3s ease-in-out;
+}
+
+.wildberries:hover {
+  transform: scale(1.3);
+}
+
+.blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 100px 50px;
+  background-color: white;
+}
+
+.blog_inner {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+
+.blog__title {
+  font-family: "Lora Regular";
+  font-style: normal;
+  font-size: 35px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-bottom: 30px;
+}
+.blog_left {
+  background-image: url(../../assets/images/JENSHINA.png);
+  width: 300px;
+  height: 380px;
+}
+.blog_right {
+  justify-content: center;
+  height: 380px;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blog__info {
+  font-family: "Georgia Regular";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.someinfo {
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  padding: 0 30px;
+}
+
+.someinfo_inner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin: 5rem 0 2.5rem;
+}
+
+.someinfo__title {
+  gap: 3rem;
+  font-family: "Lora Regular";
+  font-style: normal;
+  font-size: 30px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-bottom: 1.5rem;
+}
+.someinfo_right {
+  background-image: url(../../assets/images/логотип.png);
+  background-size: 200%;
+  background-position: center;
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+}
+.someinfo_center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footerlogo {
+  width: auto;
+  height: 3rem;
+}
+
+.someinfo__legalnotice {
+  font-family: "Georgia Regular";
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: #878787;
+}
+
+.someinfo_left {
+  align-self: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.no-decoration {
+  display: flex;
+  text-decoration: none;
+  color: #878787;
+  transition: color 0.5s ease;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.someinfo_links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.no-decoration:hover {
+  color: #edd1c7;
+}
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
+.smooth-scroll {
+  display: inline-block;
+  padding: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+}
