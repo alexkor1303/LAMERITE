@@ -216,6 +216,9 @@ button {
   font-size: 40px;
   line-height: 130%;
 }
+.about_br {
+  display: none;
+}
 .allocated__lemerite {
   color: #adc4c6;
 }
@@ -273,6 +276,7 @@ button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .product_photo {
+  border-radius: 9px 9px 0 0;
   height: 270px;
   width: 270px;
 }
@@ -388,7 +392,7 @@ button {
   font-weight: bold;
   text-transform: uppercase;
 }
-.marketplce_list {
+.marketplace_list {
   display: flex;
   width: auto;
   height: 20rem;
@@ -574,4 +578,191 @@ button {
   background-color: #f0f0f0;
   color: #333;
   text-decoration: none;
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+  ._wrapper {
+    width: 100%;
+  }
+
+  .header {
+    height: 823px;
+    margin: 0;
+    padding: 1rem 2rem;
+  }
+
+  .menu {
+    gap: 1rem;
+    font-size: 1.5rem;
+    list-style-type: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+  .burger {
+    display: block;
+    height: 22px;
+    width: 31px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .burger__line {
+    width: 100%;
+    border: 1px solid #f1cdb3;
+  }
+  .mission {
+    height: 27rem;
+  }
+  .mission__video__background {
+    display: none;
+  }
+  .mission__video._wrapper:after {
+    content: "";
+    background-image: url(./assets/images/background.JPG);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .mission-title {
+    width: 30rem;
+    height: auto;
+  }
+  .mission-text {
+    margin: 0;
+    padding: 0 5rem;
+  }
+  .mission-text {
+    font-size: 1rem;
+  }
+  .about {
+    height: 55rem;
+  }
+  .about_inner._wrapper {
+    display: flex;
+  }
+  .about_inner {
+    height: 100%;
+  }
+  .about_inner__left {
+    display: none;
+  }
+  .about_br {
+    display: block;
+  }
+  .about_title {
+    padding: 0 2rem;
+    font-size: 2.5rem;
+  }
+  .about_text {
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .topProduct {
+    height: auto;
+    padding: 4rem 0 4rem;
+  }
+  .topProduct_inner {
+    gap: 3rem;
+    height: auto;
+  }
+  .topProduct__title {
+    font-size: 2.5rem;
+  }
+  .card1,
+  .card2 {
+    display: none;
+  }
+  .marketplace {
+    height: auto;
+    width: 100%;
+    background-image: url(./assets/images/bckg3.JPG);
+    background-size: cover;
+    box-shadow: none;
+  }
+  .marketplace_inner {
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+    justify-content: unset;
+    box-shadow: none;
+  }
+  .marketplace_title {
+    margin: 0;
+    padding: 3rem 1rem 5rem;
+  }
+  .marketplace_title__style {
+    font-size: 3rem;
+    text-shadow: 1px 0px 1px #4d4d4d;
+  }
+
+  .marketplace_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .marketplace__card {
+    opacity: 0.9;
+    height: auto;
+    width: 250px;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+    padding: 0 1.5rem;
+    box-shadow: 5px 0px 5px #787878;
+  }
+
+  .marketplace__card:hover {
+    opacity: 1;
+  }
+
+  .ozonimg {
+    content: url("./assets/images/ozon2.png");
+  }
+  .wildberriesimg {
+    content: url("./assets/images/wildberries2.png");
+  }
+  .blog {
+    margin: 4rem 4rem 2rem;
+  }
+  .blog_inner {
+    flex-direction: column-reverse;
+  }
+  .blog_right {
+    width: auto;
+    height: auto;
+    padding-bottom: 4rem;
+    text-align: center;
+  }
+  .blog_left {
+    margin-bottom: 4rem;
+  }
+  .someinfo {
+    height: auto;
+  }
+  .someinfo_inner {
+    flex-direction: column;
+  }
+  .someinfo_left {
+    align-self: center;
+    padding-bottom: 4rem;
+  }
+  .someinfo_center {
+    padding-bottom: 4rem;
+  }
+  .footerlogo {
+    display: none;
+  }
+  .someinfo__legalnotice {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
