@@ -32,6 +32,11 @@ button {
   border: none;
   background-color: inherit;
 }
+.body-inner {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
 
 ._wrapper {
   width: 1200px;
@@ -76,6 +81,17 @@ button {
   color: white;
   width: auto;
   height: 27px;
+}
+.burger {
+  display: none;
+  height: 22px;
+  width: 31px;
+  flex-direction: column;
+  gap: 10px;
+}
+.burger__line {
+  width: 100%;
+  border: 1px solid #ffffff;
 }
 
 .menu {
@@ -368,12 +384,26 @@ button {
     gap: 1rem;
     font-size: 1.5rem;
     list-style-type: none;
+    display: block;
   }
-
+  .menu__item {
+    display: block;
+    padding: 10px;
+  }
   .navigation {
-    display: none;
+    height: auto;
+    position: absolute;
+    right: -350px;
+    top: 0;
+    width: 300px;
+    background-color: #adc4c6;
+    visibility: hidden;
+    z-index: 2;
+    padding: 55px 20px 20px 20px;
+    transition: 0.4s;
   }
   .burger {
+    z-index: 3;
     display: block;
     height: 22px;
     width: 31px;
@@ -384,6 +414,23 @@ button {
   .burger__line {
     width: 100%;
     border: 1px solid #ffffff;
+  }
+  .burger span {
+    transition: all 0.5s;
+  }
+  /* КРЕСТИК */
+  .main.open .burger span:nth-child(3) {
+    display: none;
+  }
+  .main.open .burger span:nth-child(2) {
+    transform: translateY(0) rotate(45deg);
+  }
+  .main.open .burger span:nth-child(1) {
+    transform: translateY(12px) rotate(-45deg);
+  }
+  .main.open .navigation {
+    transform: translateX(-100%);
+    visibility: visible;
   }
   .mission {
     height: 27rem;

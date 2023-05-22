@@ -32,7 +32,11 @@ button {
   border: none;
   background-color: inherit;
 }
-
+.body-inner {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
 ._wrapper {
   width: 1200px;
 }
@@ -76,6 +80,9 @@ button {
   color: white;
   width: auto;
   height: 27px;
+}
+.burger {
+  display: none;
 }
 .aboutBrand {
   border-bottom: 3px solid #edd1c7;
@@ -594,16 +601,31 @@ button {
     padding: 1rem 2rem;
   }
 
+  .navigation {
+    height: auto;
+    position: absolute;
+    right: -350px;
+    top: 0;
+    width: 300px;
+    background-color: #edd1c7;
+    visibility: hidden;
+    z-index: 2;
+    padding: 55px 20px 20px 20px;
+    transition: 0.4s;
+  }
+
   .menu {
     gap: 1rem;
     font-size: 1.5rem;
     list-style-type: none;
+    display: block;
   }
-
-  .navigation {
-    display: none;
+  .menu__item {
+    display: block;
+    padding: 10px;
   }
   .burger {
+    z-index: 3;
     display: block;
     height: 22px;
     width: 31px;
@@ -615,8 +637,28 @@ button {
     width: 100%;
     border: 1px solid #ffffff;
   }
+  .burger span {
+    transition: all 0.5s;
+  }
+  /* КРЕСТИК */
+  .main.open .burger span:nth-child(3) {
+    display: none;
+  }
+  .main.open .burger span:nth-child(2) {
+    transform: translateY(0) rotate(45deg);
+  }
+  .main.open .burger span:nth-child(1) {
+    transform: translateY(12px) rotate(-45deg);
+  }
+  .main.open .navigation {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
   .mission {
     height: 27rem;
+  }
+  .mission__video {
+    z-index: 0;
   }
   .mission__video__background {
     display: none;
